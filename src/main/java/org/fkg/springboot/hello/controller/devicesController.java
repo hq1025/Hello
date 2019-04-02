@@ -13,8 +13,13 @@ public class devicesController {
     @Resource
     private HelloService helloService;   
     
-    @RequestMapping("/getUsers")
+    @RequestMapping("/devices")
     public String getAllUsers(){
+       return helloService.getAllUsers(); 
+    }
+    
+    @RequestMapping("/show")
+    public String showDevices(){
        return helloService.getAllUsers(); 
     }
 }
